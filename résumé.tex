@@ -5,239 +5,25 @@
 % Set page geometry
 \usepackage[margin=1.5cm,headsep=0.5cm]{geometry}
 
-% AMS and mathtools
-\usepackage{amsmath,amsthm,amssymb,marvosym,mathrsfs,amsfonts,amscd,mathtools}
-
 % Hyperlinks and URLs
 \usepackage{url}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    citecolor=BLACK,
-    filecolor=BLACK,
-    linkcolor=BLUE,
-    urlcolor=BLUE
+    citecolor=black,
+    filecolor=black,
+    linkcolor=red,
+    urlcolor=blue
 }
 
 % Colors
 \usepackage{xcolor}
 
-% Bold math
-\usepackage{bm}
-
-% Bra Ket (Dirac) Notation
-\usepackage{braket}
-
-% Slashed characters (e.g. in Dirac equation)
-\usepackage{slashed}
-
-% Clean SI Units
-\usepackage{siunitx}
-
 % Enumerate thingies
 \usepackage{enumitem}
 
-% Cancel things out in equations
-\usepackage[makeroom]{cancel}
-
-% Graphics and figures
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage{float}
-
-% Caption figures and tables
-\usepackage{caption,subcaption}
-
-% Generate symbols
-\usepackage{textcomp} % Include this line to avoid output errors
-\usepackage{gensymb}
-
-% Make multiple rows in a table
-\usepackage{multirow}
-
-% Booktabs tables
-\usepackage{booktabs}
-
-% Useful frames
-\usepackage{mdframed}
-
-% Comment-out large sections
-\usepackage{comment}
-
 % No auto-indent
 \setlength{\parindent}{0pt}
-
-% Tikz Package Stuff
-\usepackage{pgf,tikz,pgfplots}
-\usepackage{tikz-3dplot}
-% Use various tikz libraries
-\usetikzlibrary{decorations.pathmorphing, decorations.markings, decorations.pathreplacing, patterns} % Decorate paths!
-\usetikzlibrary{calc}
-\usetikzlibrary{scopes}
-\usetikzlibrary{angles, quotes}
-\usetikzlibrary{svg.path}
-\usetikzlibrary{arrows, arrows.meta}
-\usetikzlibrary{fadings}
-% pgfplots package settings
-\pgfplotsset{compat=1.15}
-% \pgfplotsset{width=10cm,compat=1.9} % Taken from latest overleaf.
-
-% Awesome circled numbers
-\newcommand*\circled[4]{\tikz[baseline=(char.base)]{\node[shape=circle, fill=#2, draw=#3, text=#4, inner sep=2pt] (char) {#1};}}
-
-% Control size of text
-\usepackage{relsize}
-
-% Extend conditional commands
-\usepackage{xifthen}
-
-% Scale math by size
-\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}
-
-% Big integrals
-\usepackage{bigints}
-
-% Number equations within sections
-\numberwithin{equation}{section}
-
-% Generate blind text
-\usepackage{blindtext}
-
-% Useful symbols
-\usepackage{marvosym}
-
-%%%% COLORS: DEFINITIONS AND COMMANDS %%%%
-% Miscellaneous
-\definecolor{DARKBLUE}{HTML}{040080}
-\definecolor{DARKBROWN}{HTML}{8B4513}
-\definecolor{LIGHTBROWN}{HTML}{CD853F}
-\definecolor{PINK}{HTML}{D147BD}
-\definecolor{LIGHTPINK}{HTML}{DC75CD}
-\definecolor{GREENSCREEN}{HTML}{00FF00}
-\definecolor{ORANGE}{HTML}{FF862F}
-\newcommand{\DARKBLUE}{\color{DARKBLUE}}
-\newcommand{\DARKBROWN}{\color{DARKBROWN}}
-\newcommand{\LIGHTBROWN}{\color{LIGHTBROWN}}
-\newcommand{\PINK}{\color{PINK}}
-\newcommand{\LIGHTPINK}{\color{LIGHTPINK}}
-\newcommand{\GREENSCREEN}{\color{GREENSCREEN}}
-\newcommand{\ORANGE}{\color{ORANGE}}
-% Blue
-\definecolor{BLUEE}{HTML}{1C758A}
-\definecolor{BLUED}{HTML}{29ABCA}
-\definecolor{BLUEC}{HTML}{58C4DD}
-\definecolor{BLUEB}{HTML}{9CDCEB}
-\definecolor{BLUEA}{HTML}{C7E9F1}
-\definecolor{BLUE}{HTML}{0000FF}
-\newcommand{\BLUEE}{\color{BLUEE}}
-\newcommand{\BLUED}{\color{BLUED}}
-\newcommand{\BLUEC}{\color{BLUEC}}
-\newcommand{\BLUEB}{\color{BLUEB}}
-\newcommand{\BLUEA}{\color{BLUEA}}
-\newcommand{\BLUE}{\color{BLUE}}
-% Teal
-\definecolor{TEALE}{HTML}{49A88F}
-\definecolor{TEALD}{HTML}{55C1A7}
-\definecolor{TEALC}{HTML}{5CD0B3}
-\definecolor{TEALB}{HTML}{76DDC0}
-\definecolor{TEALA}{HTML}{ACEAD7}
-\definecolor{TEAL}{HTML}{00FFFF}
-\newcommand{\TEALE}{\color{TEALE}}
-\newcommand{\TEALD}{\color{TEALD}}
-\newcommand{\TEALC}{\color{TEALC}}
-\newcommand{\TEALB}{\color{TEALB}}
-\newcommand{\TEALA}{\color{TEALA}}
-\newcommand{\TEAL}{\color{TEAL}}
-% Green
-\definecolor{GREENE}{HTML}{699C52}
-\definecolor{GREEND}{HTML}{77B05D}
-\definecolor{GREENC}{HTML}{83C167}
-\definecolor{GREENB}{HTML}{A6CF8C}
-\definecolor{GREENA}{HTML}{C9E2AE}
-\definecolor{GREEN}{HTML}{00FF00}
-\newcommand{\GREENE}{\color{GREENE}}
-\newcommand{\GREEND}{\color{GREEND}}
-\newcommand{\GREENC}{\color{GREENC}}
-\newcommand{\GREENB}{\color{GREENB}}
-\newcommand{\GREENA}{\color{GREENA}}
-\newcommand{\GREEN}{\color{GREEN}}
-% Yellow
-\definecolor{YELLOWE}{HTML}{E8C11C}
-\definecolor{YELLOWD}{HTML}{F4D345}
-\definecolor{YELLOWC}{HTML}{FFFF00}
-\definecolor{YELLOWB}{HTML}{FFEA94}
-\definecolor{YELLOWA}{HTML}{FFF1B6}
-\definecolor{YELLOW}{HTML}{FFFF00}
-\newcommand{\YELLOWE}{\color{YELLOWE}}
-\newcommand{\YELLOWD}{\color{YELLOWD}}
-\newcommand{\YELLOWC}{\color{YELLOWC}}
-\newcommand{\YELLOWB}{\color{YELLOWB}}
-\newcommand{\YELLOWA}{\color{YELLOWA}}
-\newcommand{\YELLOW}{\color{YELLOW}}
-% Gold
-\definecolor{GOLDE}{HTML}{C78D46}
-\definecolor{GOLDD}{HTML}{E1A158}
-\definecolor{GOLDC}{HTML}{F0AC5F}
-\definecolor{GOLDB}{HTML}{F9B775}
-\definecolor{GOLDA}{HTML}{F7C797}
-\newcommand{\GOLDE}{\color{GOLDE}}
-\newcommand{\GOLDD}{\color{GOLDD}}
-\newcommand{\GOLDC}{\color{GOLDC}}
-\newcommand{\GOLDB}{\color{GOLDB}}
-\newcommand{\GOLDA}{\color{GOLDA}}
-% Red
-\definecolor{REDE}{HTML}{CF5044}
-\definecolor{REDD}{HTML}{E65A4C}
-\definecolor{REDC}{HTML}{FC6255}
-\definecolor{REDB}{HTML}{FF8080}
-\definecolor{REDA}{HTML}{F7A1A3}
-\definecolor{RED}{HTML}{FF0000}
-\newcommand{\REDE}{\color{REDE}}
-\newcommand{\REDD}{\color{REDD}}
-\newcommand{\REDC}{\color{REDC}}
-\newcommand{\REDB}{\color{REDB}}
-\newcommand{\REDA}{\color{REDA}}
-\newcommand{\RED}{\color{RED}}
-% Maroon
-\definecolor{MAROONE}{HTML}{94424F}
-\definecolor{MAROOND}{HTML}{A24D61}
-\definecolor{MAROONC}{HTML}{C55F73}
-\definecolor{MAROONB}{HTML}{EC92AB}
-\definecolor{MAROONA}{HTML}{ECABC1}
-\newcommand{\MAROONE}{\color{MAROONE}}
-\newcommand{\MAROOND}{\color{MAROOND}}
-\newcommand{\MAROONC}{\color{MAROONC}}
-\newcommand{\MAROONB}{\color{MAROONB}}
-\newcommand{\MAROONA}{\color{MAROONA}}
-% Purple
-\definecolor{PURPLEE}{HTML}{644172}
-\definecolor{PURPLED}{HTML}{715582}
-\definecolor{PURPLEC}{HTML}{9A72AC}
-\definecolor{PURPLEB}{HTML}{B189C6}
-\definecolor{PURPLEA}{HTML}{CAA3E8}
-\definecolor{PURPLE}{HTML}{FF00FF}
-\newcommand{\PURPLEE}{\color{PURPLEE}}
-\newcommand{\PURPLED}{\color{PURPLED}}
-\newcommand{\PURPLEC}{\color{PURPLEC}}
-\newcommand{\PURPLEB}{\color{PURPLEB}}
-\newcommand{\PURPLEA}{\color{PURPLEA}}
-\newcommand{\PURPLE}{\color{PURPLE}}
-% White and Black
-\definecolor{WHITE}{HTML}{FFFFFF}
-\newcommand{\WHITE}{\color{WHITE}}
-\definecolor{BLACK}{HTML}{000000}
-\newcommand{\BLACK}{\color{BLACK}}
-% Different Grays
-\definecolor{LIGHTGRAY}{HTML}{BBBBBB}
-\definecolor{GRAY}{HTML}{888888}
-\definecolor{DARKGRAY}{HTML}{444444}
-\definecolor{DARKERGRAY}{HTML}{222222}
-\definecolor{GRAYBROWN}{HTML}{736357}
-\newcommand{\LIGHTGRAY}{\color{LIGHTGRAY}}
-\newcommand{\GRAY}{\color{GRAY}}
-\newcommand{\DARKGRAY}{\color{DARKGRAY}}
-\newcommand{\DARKERGRAY}{\color{DARKERGRAY}}
-\newcommand{\GRAYBROWN}{\color{GRAYBROWN}}%
 
 \begin{document}
 
@@ -251,8 +37,7 @@
 ~
 \begin{minipage}{0.35\textwidth}
 \begin{flushright}
-% \parbox[c]{\textwidth}{Website: \url{https://nkostin.com} \\ Email: \href{mailto:contact@nkostin.com}{contact@nkostin.com} \\ GitHub: \url{https://github.com/nkostin4} \\ Mobile: +1 719-271-9108}
-\parbox[c]{\textwidth}{Website: \url{https://nkostin.com} \\ Email: \texttt{nkostin@mines.edu} \\ GitHub: \url{https://github.com/nkostin4} \\ Mobile: +1 719-271-9108}
+\parbox[c]{\textwidth}{Website: \url{https://nkostin.com} \\ Email: \href{mailto:nkostin4@protonmail.com}{nkostin4@protonmail.com} \\ GitHub: \url{https://github.com/nkostin4}}
 \end{flushright}
 \end{minipage}
 
@@ -288,7 +73,7 @@
 
 \hspace{1.5em} \textbf{Head Teaching Assistant} \hfill Golden, CO
 
-\hspace{1.5em} \textit{Physics II --- Electromagnetism and Optics} \hfill January 2019 --- May 2021
+\hspace{1.5em} \textit{Physics II --- Electromagnetism and Optics} \hfill January 2019 --- June 2021
 
 \vspace{-0.5em}
 
@@ -302,7 +87,7 @@
 
 \hspace{1.5em} \textbf{SAGE Affordable Tutoring} \hfill Colorado Springs, CO
 
-\hspace{1.5em} \textit{Instructor} \hfill February 2018 --- December 2019
+\hspace{1.5em} \textit{Instructor} \hfill February 2018 --- April 2022
 
 \vspace{-0.5em}
 
@@ -320,7 +105,7 @@
 
 \hspace{1.5em} \textbf{Scientific/Numerical Computing:}
 
-\hspace{3.0em} Python, extensive knowledge of \texttt{numpy}, \texttt{scipy} and \texttt{manim} libraries. $\quad\bullet\quad$ Mathematica $\quad\bullet\quad$ \textsc{MatLab} $\quad\bullet\quad$ R
+\hspace{3.0em} Python, especially \texttt{numpy}, \texttt{scipy}, \texttt{sympy}, and \texttt{manim} libraries. $\quad\bullet\quad$ Mathematica $\quad\bullet\quad$ \textsc{MatLab} $\quad\bullet\quad$ R
 
 \vspace{0.5em}
 
